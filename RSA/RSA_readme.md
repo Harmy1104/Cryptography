@@ -1,7 +1,6 @@
 # RSA Algorithm
 **RSA** is an algorithm used by modern computers to encrypt and decrypt messages. It is an **asymmetric cryptographic algorithm**. Asymmetric means that there are **two different keys**. This is also called public key cryptography, because one of the keys can be given to anyone. The other key must be kept private. The algorithm is based on the fact that finding the factors of a large composite number is difficult: when the integers are prime numbers, the problem is called prime factorization. It is also a key pair (\ public and private key\ ) generator.
 ## Operation
----
 RSA involves a public key and private key. The public key can be known to everyone; it is used to encrypt messages. Messages encrypted using the public key can only be decrypted with the private key. The keys for the RSA algorithm are generated the following way:
 1. Choose two different large random prime numbers
 1. Calculate: **$n = pq$**
@@ -16,7 +15,6 @@ The **public key** is made of the modulus $n$ and the public (\ or encryption\ )
 The **private key** is made of the modulus $n$ and the private (\ or decryption\ ) exponent **$d$** which must be kept secret.
 
 ## Encrypting Message
----
 Alice gives her public key **$(\ n$** & **$e\ )$** to Bob and keeps her private key secret. Bob wants to send message **M** to Alice.
 
 First he turns **M** into a number **$m$** smaller than **$n$** by using an agreed-upon reversible protocol known as a padding scheme. He then computes the ciphertext corresponding to:
@@ -26,7 +24,6 @@ $$
 This can be done quickly using the method of exponentiation by squaring. Bob then sends **$c$** to Alice.
 
 ## Decrypting Message
----
 Alice can recover **$m$** from **$c$** by using her private key **$d$** in the following procedure:
 $$
     m = c^d\ \ mod\ \ \ n
@@ -40,7 +37,6 @@ $$
     c^d \equiv \ m\ \ mod\ \ n
 $$
 ## A Working Example
----
 1. Choose two random prime numbers.
 2. **$p = 61$** and **$q = 53$** Compute **$n$ = $pq$**
 3. **$n=61*53=3233$**
@@ -64,4 +60,4 @@ To decrypt **$c=855$**, we calculate
 
 **$m=855^{2753}\ \ mod\ \ 3233=123$**
 
-##### Source : [wikipedia](https://simple.wikipedia.org/wiki/RSA_algorithm)
+<br><br><br>##### Source : [wikipedia](https://simple.wikipedia.org/wiki/RSA_algorithm)</br></br></br>
