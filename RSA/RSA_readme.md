@@ -19,30 +19,30 @@ Alice gives her public key **$(\ n$** & **$e\ )$** to Bob and keeps her private 
 
 First he turns **M** into a number **$m$** smaller than **$n$** by using an agreed-upon reversible protocol known as a padding scheme. He then computes the ciphertext corresponding to:
 
-$$
+**$$
     c = m^e \ \ mod\ \ \ n
-$$
+$$**
 
 This can be done quickly using the method of exponentiation by squaring. Bob then sends **$c$** to Alice.
 
 ## Decrypting Message
 Alice can recover **$m$** from **$c$** by using her private key **$d$** in the following procedure:
 
-$$
+**$$
     m = c^d\ \ mod\ \ \ n
-$$
+$$**
 
 Given **$m$**, she can recover the original distinct prime numbers, applying the Chinese remainder theorem to these two congruences yields
 
-$$
+**$$
     m^ed \equiv \ m\ \ mod\ \ pq
-$$
+$$**
 
 Thus,
 
-$$
+**$$
     c^d \equiv \ m\ \ mod\ \ n
-$$
+$$**
 
 ## A Working Example
 1. Choose two random prime numbers.
