@@ -18,24 +18,32 @@ The **private key** is made of the modulus $n$ and the private (\ or decryption\
 Alice gives her public key **$(\ n$** & **$e\ )$** to Bob and keeps her private key secret. Bob wants to send message **M** to Alice.
 
 First he turns **M** into a number **$m$** smaller than **$n$** by using an agreed-upon reversible protocol known as a padding scheme. He then computes the ciphertext corresponding to:
+
 $$
     c = m^e \ \ mod\ \ \ n
 $$
+
 This can be done quickly using the method of exponentiation by squaring. Bob then sends **$c$** to Alice.
 
 ## Decrypting Message
 Alice can recover **$m$** from **$c$** by using her private key **$d$** in the following procedure:
+
 $$
     m = c^d\ \ mod\ \ \ n
 $$
+
 Given **$m$**, she can recover the original distinct prime numbers, applying the Chinese remainder theorem to these two congruences yields
+
 $$
     m^ed \equiv \ m\ \ mod\ \ pq
 $$
+
 Thus,
+
 $$
     c^d \equiv \ m\ \ mod\ \ n
 $$
+
 ## A Working Example
 1. Choose two random prime numbers.
 2. **$p = 61$** and **$q = 53$** Compute **$n$ = $pq$**
@@ -60,4 +68,4 @@ To decrypt **$c=855$**, we calculate
 
 **$m=855^{2753}\ \ mod\ \ 3233=123$**
 
-<br><br><br>Source : [wikipedia](https://simple.wikipedia.org/wiki/RSA_algorithm)</br></br></br>
+<br><br>Source : [wikipedia](https://simple.wikipedia.org/wiki/RSA_algorithm)</br></br>
