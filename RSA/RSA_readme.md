@@ -19,9 +19,9 @@ Alice gives her public key **$(\ n$** & **$e\ )$** to Bob and keeps her private 
 
 First he turns **M** into a number **$m$** smaller than **$n$** by using an agreed-upon reversible protocol known as a padding scheme. He then computes the ciphertext corresponding to:
 
-**$$
+```math
     c = m^e \ \ mod\ \ \ n
-$$**
+```
 
 This can be done quickly using the method of exponentiation by squaring. Bob then sends **$c$** to Alice.
 
