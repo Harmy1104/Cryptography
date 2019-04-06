@@ -26,7 +26,7 @@ This can be done quickly using the method of exponentiation by squaring. Bob the
 ## Decrypting Message
 Alice can recover **m** from **c** by using her private key **d** in the following procedure:
 
-**m = ( c^d ) mod ( n ) **
+**m = ( c^d ) mod ( n )**
 
 Given **m**, she can recover the original distinct prime numbers, applying the Chinese remainder theorem to these two congruences yields
 
@@ -52,7 +52,7 @@ The **public key** is **(n=3233, e=17)**. For a padded message **m** the encrypt
 
 The **private key** is **( n = 3233, d = 2753 )**. The decryption function **m = ( c^d ) mod ( n )** becomes: **m = ( c^{2753} ) mod ( 3233 )**
 
-For example, to encrypt **m = 123 **, we calculate
+For example, to encrypt **m = 123**, we calculate
 
 **c = ( 123^{17} ) mod ( 3233 ) = 855** 
 
