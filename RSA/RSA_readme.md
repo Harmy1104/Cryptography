@@ -5,7 +5,7 @@ RSA involves a public key and private key. The public key can be known to everyo
 1. Choose two different large random prime numbers
 1. Calculate: **$n = pq$**
     * **$n$** is the modulus for the public key and the private keys
-1. Calculate the totient: **$\phi (\ n\ ) = (\ p\ - \ 1\ )(\  q\  -\  1\ )$** .
+1. Calculate the totient: **$\phi ( n ) = ( p -  1 )( q - 1 )$** .
 1. Choose an integer **$e$** such that **$1 < e < \phi (\ n\ )$** and **$e$** is co-prime to **$\phi (\ n\ )$ ie: $e$** and **$\phi (\ n\ )$** share no factors other than 1; **$gcd (\ e, \phi (\ n\ )\ ) = 1$** .
     * **$e$** is released as the public key exponent
 1. Compute **$d$** to satisfy the congruence relation **$de \equiv 1 (\ mod\ (\ \phi (\ n\ )\ )$ ie: $de = 1 + k\phi(\ n\ )$** for some integer **$k$** . (Simply to say : Calculate **$d = (\ 1\ +\ k\phi(\ n\ )\ )e$** )
